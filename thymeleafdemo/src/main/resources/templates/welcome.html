@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+<h1 th:if="${display}" th:text="${message}">Hello World!</h1>
+<p>My home page</p>
+
+<h2>Clients: </h2>
+<table>
+    <tr th:each="client:${clients}">
+        <td th:text="${client.firstName}"></td>
+        <td th:text="${client.lastName}"></td>
+    </tr>
+</table>
+</body>
+</html>
